@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<!-- setter html lang til nb, altså norsk bokmål, for å hjelpe søkemotorer og nettlesere å forstå hvilket språk innholdet på siden bruker -->
+<html lang="nb">
+<head>
+<!-- TITTEL på nettsiden. Må være med. -->
+  <title>Hytteutleie AS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Her kommer hyperlink til eksterne stilark og scriptbibliotek -->
+  <link rel="stylesheet" href="script/style.css">
+  <!-- Velger å ha javascriptbibliotekene nedenfor hos ekstern tjener da de har bedre ytelse og brukeren trolig har de cached noe som reduserer båndbredde og innlastingstid. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script/jQuery.js"></script>
+</head>
+<!-- Her er koden for det "synlige" på siden -->
+<body>
+<!-- Laget en hovedelement for å kunne sentrere siden. -->
+<div class="hovedboks">
+<!-- Dette er knappen som erstatter den vanlige menyen når bredden på nettleseren blir under 767px. -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button id="2" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- LOGO -->
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="150" height="100" alt=""/></a>
+    </div>
+    <!-- MENY -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li id="side1" class="active"><a href="index.html">Hjem</a></li>
+        <li id="side2"><a href="#">Leie hytte</a></li>
+        <li id="side3"><a href="#">Våre hytter</a></li>
+        <li id="side4"><a href="#">Hyttekart</a></li>
+        <li id="side5"><a href="#">Aktiviteter</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- BANNER -->
+<div id="slideshow">
+   <div>
+     <img src="images/1.jpg" width="100%">
+   </div>
+   <div>
+     <img src="images/2.jpg" width="100%">
+   </div>
+   <div>
+     <img src="images/3.jpg" width="100%">
+   </div>
+</div>
+<!-- CONTAINER FOR HOVEDINNHOLD -->
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div id="div1" class="col-sm-8 text-left">
+      <!-- DYNAMISK SIDEINNHOLD BLIR PLASSERT HER -->
+      <h1>Velkommen til Hytteutleie AS!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <!-- CONTAINER FOR SIDEKOLLONNE -->
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+      <!-- INNHOLD I SIDEKOLLONNE-->
+        <script src="script/ekstern_boks_liten.js"></script><noscript><a href="http://www.yr.no/sted/Norge/Sør-Trøndelag/Trondheim/Trondheim/">yr.no: Værvarsel for Trondheim</a></noscript>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BUNNTEKST -->
+<hr>
+<footer class="container-fluid text-center">
+	<p>E.C. Dahlsgate 2
+    <br>7012 Trondheim
+    <br>Man-Fre 08:00 - 16:00<br>
+    <br>Telefon: 123 45 678
+    <br>E-post: post@hytteutleie.no
+	</p>
+</footer>
+</div>
+</body>
+</html>
