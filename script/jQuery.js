@@ -38,3 +38,32 @@ $(document).ready(function(){
         $("#div1").load("sidene/5.html");
     });
 });
+$(document).ready(function(){
+    $("#side5").click(function(){
+		$("#slideshow").show();
+        $("#div1").load("sidene/5.html");
+    });
+});
+
+$(document).ready(function(){
+$(".img-rounded").hover(function(){
+$(this).stop().animate({"opacity": "0.85"});
+}, function(){
+$(this).stop().animate({"opacity": "1.0"});
+});
+
+});
+
+$(document).ready(function(){
+    $(".skog").click(function(){
+		$("#slideshow").hide();
+        $("#div1").load("sidene/skog.html");
+    });
+});
+
+$(document).ready(function(){
+    $(".fjell").click(function(){
+		$("#slideshow").hide();
+        $("#div1").load("sidene/fjell.html");
+    });
+});
