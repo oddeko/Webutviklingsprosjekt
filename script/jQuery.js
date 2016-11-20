@@ -19,20 +19,13 @@ $(document).ready(function(){
 });
 // SIDE2
 $(document).ready(function(){
-	// Utfører gitte handlinger ved klikk på element med ID: "side2".
-    $("#side2").click(function(){
-		// Fjerner klassen "active" fra elementer med li(ste)-tag.
-		$("li").removeClass("active");
-		// Legger til klassen "active" til element med ID: "side2".
-		$("#side2").addClass("active");
-		// Gjemmer dropdown-menyen ved menyvalg.
-		$("#myNavbar").removeClass("in");
-		// Gjemmer slideshow
-		$("#slideshow").hide();
-		// Gjemmer sidekollonnen.
-		$(".col-sm-2").hide();
-		// Laster inn side "2". 
-        $("#div1").load("sidene/2.html");
+    $("#side2").click(function(){ // Utfører gitte handlinger ved klikk på element med ID: "side2".
+		$("li").removeClass("active"); // Fjerner klassen "active" fra elementer med li(ste)-tag.
+		$("#side2").addClass("active"); // Legger til klassen "active" til element med ID: "side2".
+		$("#myNavbar").removeClass("in"); // Gjemmer dropdown-menyen ved menyvalg.
+		$("#slideshow").hide(); // Gjemmer slideshow
+		$(".col-sm-2").hide(); // Gjemmer sidekollonnen.
+        $("#div1").load("sidene/2.html"); // Laster inn side "2".
     });
 });
 // SIDE3
