@@ -4,102 +4,58 @@
         <form>
             <table class="table">
                 <tr>
-                    <td>
-                        <label for="hyttevalg">Velg hytte: </label>
-                    </td>
-                    <td>
-                        <select>
-                    <option value="0">Månetoppen</option>
-                    <option value="1">Tiurtoppen</option>
-                    <option value="2">Fjellro</option>
-                    <option value="3">Fjordgløtt</option>
-                    <option value="4">Lykkeli</option>
-                    <option value="5">Nettbua</option>
-                    <option value="6">Bjørnehiet</option>
-                    <option value="7">Furubo</option>
-                    <option value="8">Trollstua</option>
-                </select>
-                    </td>
+                    <td><label for="hyttevalg">Velg hytte: </label></td>
+                    <td><select>
+                            <option value="0">Månetoppen</option>
+                            <option value="1">Tiurtoppen</option>
+                            <option value="2">Fjellro</option>
+                            <option value="3">Fjordgløtt</option>
+                            <option value="4">Lykkeli</option>
+                            <option value="5">Nettbua</option>
+                            <option value="6">Bjørnehiet</option>
+                            <option value="7">Furubo</option> 
+                            <option value="8">Trollstua</option>
+                    </select></td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="dato-ankomst">Fra:</label>
-                    </td>
-                    <td>
-                        <input type="date" name="dato-ankomst" required/>
-                    </td>
+                    <td> <label for="dato-ankomst">Fra:</label> </td>
+                    <td> <input type="date" name="dato-ankomst" required/> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="dato-avreise">Til: </label>
-                    </td>
-                    <td>
-                        <input type="date" name="dato-avreise" required>
-                    </td>
+                    <td> <label for="dato-avreise">Til: </label> </td>
+                    <td> <input type="date" name="dato-avreise" required> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="timepris">placeholder--</label>
-                    </td>
-                    <td>
-                        <input type="number" name="timepris" value="1" min="1" max="12">
-                    </td>
+                    <td> <label for="timepris">placeholder--</label> </td>
+                    <td> <input type="number" name="timepris" value="1" min="1" max="12"> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="vasking">Bestill vasking: 500,- </label>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="vaskesjekk">
-                    </td>
+                    <td> <label for="vasking">Bestill vasking: 500,- </label> </td>
+                    <td> <input type="checkbox" name="vaskesjekk"> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="tf-medlem">Medlem av turistforeningen: -15% </label>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="tf-medlem">
-                    </td>
+                    <td> <label for="tf-medlem">Medlem av turistforeningen: -15% </label> </td>
+                    <td> <input type="checkbox" name="tf-medlem"> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="fornavn">Fornavn: </label>
-                    </td>
-                    <td>
-                        <input type="text" name="fornavn" placeholder="Ola *" required>
-                    </td>
+                    <td> <label for="fornavn">Fornavn: </label> </td>
+                    <td> <input type="text" name="fornavn" placeholder="Ola *" required> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="etternavn">Etternavn: </label>
-                    </td>
-                    <td>
-                        <input type="text" name="etternavn" placeholder="Nordmann *" required>
-                    </td>
+                    <td> <label for="etternavn">Etternavn: </label> </td>
+                    <td> <input type="text" name="etternavn" placeholder="Nordmann *" required> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="tlf">Tlf: </label>
-                    </td>
-                    <td>
-                        <input type="text" name="tlf" placeholder="12345678 *" pattern="^\d{8}$" required>
-                    </td>
+                    <td> <label for="tlf">Tlf: </label> </td>
+                    <td> <input type="text" name="tlf" placeholder="12345678 *" pattern="^\d{8}$" required> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="email">Email: </label>
-                    </td>
-                    <td>
-                        <input type="email" name="email" placeholder="olanord@example.com *" required>
-                    </td>
+                    <td> <label for="email">Email: </label> </td>
+                    <td> <input type="email" name="email" placeholder="olanord@example.com *" required> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label for="ekstra-informasjon">Ekstra informasjon: </label>
-                    </td>
-                    <td>
-                        <textarea name="ekstra-informasjon" wrap="soft"></textarea>
-                    </td>
+                    <td> <label for="ekstra-informasjon">Ekstra informasjon: </label> </td>
+                    <td> <textarea name="ekstra-informasjon" wrap="soft"></textarea> </td>
                 </tr>
             </table>
             <button type="submit">Bestill</button>
