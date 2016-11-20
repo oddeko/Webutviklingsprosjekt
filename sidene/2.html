@@ -1,6 +1,6 @@
 <h1>Bestill Hytte</h1>
 <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
         <form>
             <table class="table">
                 <tr>
@@ -18,16 +18,17 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <td> <label for="dato-ankomst">Fra:</label> </td>
-                    <td> <input type="date" name="dato-ankomst" required/> </td>
+                    <td> <label for="dato-ankomst">Ankomst:</label> </td>
+                    <td> <input type="date" id="arrival" name="dato-ankomst" required/> </td>
                 </tr>
                 <tr>
-                    <td> <label for="dato-avreise">Til: </label> </td>
-                    <td> <input type="date" name="dato-avreise" required> </td>
+                    <td> <label for="dato-avreise">Avreise: </label> </td>
+                    <td> <input type="date" id="departure" name="dato-avreise" required> </td>
                 </tr>
-                <tr>
-                    <td> <label for="timepris">placeholder--</label> </td>
-                    <td> <input type="number" name="timepris" value="1" min="1" max="12"> </td>
+                <tr id="jim">
+                    <td> <label for="timepris">Antall timer: <span id="timepris"></span></label> </td>
+                    <td> <input type="number" name="antall-timer" id="antall-timer" value="1" min="1" max="12" onchange="updatePriceForOneDayStay()">
+                         Total timepris: <span id="total-timepris"></span></td>
                 </tr>
                 <tr>
                     <td> <label for="vasking">Bestill vasking: 500,- </label> </td>
@@ -39,7 +40,7 @@
                 </tr>
                 <tr>
                     <td> <label for="fornavn">Fornavn: </label> </td>
-                    <td> <input type="text" name="fornavn" placeholder="Ola *" required> </td>
+                    <td> <input type="text" id="jim" name="fornavn" placeholder="Ola *" required> </td>
                 </tr>
                 <tr>
                     <td> <label for="etternavn">Etternavn: </label> </td>
@@ -62,3 +63,64 @@
         </form>
     </div>
 </div>
+<script>
+        var today = new Date();
+        var todayFormat = formatDate(today)
+        var timepris = 5;
+        document.getElementById("timepris").innerHTML = timepris + ',-';
+        updatePriceForOneDayStay();
+        
+
+        var arrival = document.getElementById("arrival");
+        var departure = document.getElementById("departure");
+
+        arrival.setAttribute("min", todayFormat);
+        arrival.value = todayFormat;
+        departure.value = todayFormat;
+        updateDeparturePicker(today);
+
+        function updateDeparturePicker(newArrivalDate) {
+            // set the min date of departure to the same date as arrival
+            document.getElementById("departure").setAttribute("min", formatDate(newArrivalDate));
+            // add 14
+            newArrivalDate.setDate(newArrivalDate.getDate() + 14);
+            // et the max date of departure to a forthnight after arrival.
+            document.getElementById("departure").setAttribute("max", formatDate(newArrivalDate));
+        }
+
+        // creates a string format that the html date input type can use from a javascript date datatype.
+        function formatDate(theDate) {
+            var dd = theDate.getDate();
+            var mm = theDate.getMonth()+1; //January is 0!
+            var yyyy = theDate.getFullYear();
+            // add leading zeroes to date and month as the html date input type will act in unexpected
+            // ways if it is not there. At the very least, I could not get max date to work
+            // properly in at least one case (the date of making this), without this part.
+            dd = (dd<10 ? '0'+dd: dd)
+            mm = (mm<10 ? '0'+mm: mm)
+            theDate = yyyy+'-'+mm+'-'+dd;
+            return theDate;
+        }
+
+        function updatePriceForOneDayStay() {
+            document.getElementById("total-timepris").innerHTML = timepris * document.getElementById("antall-timer").value + ',-';
+        }
+
+        $(document).ready(function() {
+            $("#arrival").change(function() {
+                setHourlyPriceVisibility();
+            });
+
+            $("#departure").change(function() {
+                setHourlyPriceVisibility();
+            });
+
+            function setHourlyPriceVisibility() {
+                if ($("#arrival").val() == $("#departure").val()) {
+                    $("#jim").show();
+                } else {
+                    $("#jim").hide();
+                }
+            }
+        });
+</script>
