@@ -25,6 +25,8 @@ $(document).ready(function(){
 		$("li").removeClass("active");
 		// Legger til klassen "active" til element med ID: "side2".
 		$("#side2").addClass("active");
+		// Gjemmer dropdown-menyen ved menyvalg.
+		$("#myNavbar").removeClass("in");
 		// Gjemmer slideshow
 		$("#slideshow").hide();
 		// Gjemmer sidekollonnen.
@@ -38,6 +40,7 @@ $(document).ready(function(){
     $("#side3").click(function(){
 		$("li").removeClass("active");
 		$("#side3").addClass("active");
+		$("#myNavbar").removeClass("in");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/3.html");
@@ -48,6 +51,7 @@ $(document).ready(function(){
     $("#side4").click(function(){
 		$("li").removeClass("active");
 		$("#side4").addClass("active");
+		$("#myNavbar").removeClass("in");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/4.html");
@@ -58,6 +62,7 @@ $(document).ready(function(){
     $("#side5").click(function(){
 		$("li").removeClass("active");
 		$("#side5").addClass("active");
+		$("#myNavbar").removeClass("in");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/5.html");
