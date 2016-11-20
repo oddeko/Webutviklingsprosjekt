@@ -68,14 +68,6 @@ $(document).ready(function(){
         $("#div1").load("sidene/5.html");
     });
 });
-// BILDEEFFEKT
-$(document).ready(function(){
-	$(".img-rounded").hover(function(){
-		$(this).stop().animate({"opacity": "0.85"});
-		}, function(){
-		$(this).stop().animate({"opacity": "1.0"});
-	});
-});
 // SIDE-SKOG
 $(document).ready(function(){
     $(".skog").click(function(){
@@ -95,4 +87,12 @@ $(document).ready(function(){
 		$(".col-sm-2").show();
         $("#div1").load("sidene/fjell.html");
     });
+});
+// BILDEEFFEKT
+$(document).ready(function(){
+	$(".img-rounded").hover(function(){
+		$(this).stop().animate({"opacity": "0.85"});
+		}, function(){
+		$(this).stop().animate({"opacity": "1.0"});
+	});
 });
