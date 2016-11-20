@@ -19,15 +19,25 @@ $(document).ready(function(){
 });
 // SIDE2
 $(document).ready(function(){
+	// Utfører gitte handlinger ved klikk på element med ID: "side2".
     $("#side2").click(function(){
+		// Fjerner klassen "active" fra elementer med li(ste)-tag.
+		$("li").removeClass("active");
+		// Legger til klassen "active" til element med ID: "side2".
+		$("#side2").addClass("active");
+		// Gjemmer slideshow
 		$("#slideshow").hide();
+		// Gjemmer sidekollonnen.
 		$(".col-sm-2").hide();
+		// Laster inn side "2". 
         $("#div1").load("sidene/2.html");
     });
 });
 // SIDE3
 $(document).ready(function(){
     $("#side3").click(function(){
+		$("li").removeClass("active");
+		$("#side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/3.html");
@@ -36,6 +46,8 @@ $(document).ready(function(){
 // SIDE4
 $(document).ready(function(){
     $("#side4").click(function(){
+		$("li").removeClass("active");
+		$("#side4").addClass("active");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/4.html");
@@ -44,6 +56,8 @@ $(document).ready(function(){
 // SIDE5
 $(document).ready(function(){
     $("#side5").click(function(){
+		$("li").removeClass("active");
+		$("#side5").addClass("active");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/5.html");
@@ -60,6 +74,8 @@ $(document).ready(function(){
 // SIDE-SKOG
 $(document).ready(function(){
     $(".skog").click(function(){
+		$("li").removeClass("active");
+		$("#side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/skog.html");
@@ -68,6 +84,8 @@ $(document).ready(function(){
 // SIDE-FJELL
 $(document).ready(function(){
     $(".fjell").click(function(){
+		$("li").removeClass("active");
+		$("#side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/fjell.html");
