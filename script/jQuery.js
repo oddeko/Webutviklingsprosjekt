@@ -26,6 +26,7 @@ $(document).ready(function(){
 		$("#slideshow").hide(); // Gjemmer slideshow
 		$(".col-sm-2").hide(); // Gjemmer sidekollonnen.
         $("#div1").load("sidene/2.html"); // Laster inn side "2".
+		$(".row.content").css("height","750px"); // Setter høyden på container ettersom den nekter å automatisk tilpasse seg.
     });
 });
 // SIDE3
@@ -37,6 +38,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/3.html");
+		$(".row.content").css("height","1050px");
     });
 });
 // SIDE4
@@ -48,6 +50,7 @@ $(document).ready(function(){
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/4.html");
+		$(".row.content").css("height","450px");
     });
 });
 // SIDE5
@@ -59,6 +62,7 @@ $(document).ready(function(){
 		$("#slideshow").show();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/5.html");
+		$(".row.content").css("height","900px");
     });
 });
 // SIDE-SKOG
@@ -69,6 +73,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/skog.html");
+		$(".row.content").css("height","750px");
     });
 });
 // SIDE-FJELL
@@ -79,6 +84,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/fjell.html");
+		$(".row.content").css("height","750px");
     });
 });
 // SIDE-SJØ
@@ -89,6 +95,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
         $("#div1").load("sidene/sjø.html");
+		$(".row.content").css("height","750px");
     });
 });
 
