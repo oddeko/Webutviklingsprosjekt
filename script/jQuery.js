@@ -92,6 +92,16 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $(".månetoppen").click(function(){
+		$("li").removeClass("active");
+		$("#side3").addClass("active");
+		$("#slideshow").hide();
+		$(".col-sm-2").show();
+        $("#div1").load("sidene/månetoppen.html");
+    });
+});
+
 // BILDEEFFEKT
 $(document).ready(function(){
 	$(".img-rounded").hover(function(){
