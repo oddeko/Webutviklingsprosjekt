@@ -5,7 +5,7 @@
             <table class="table">
                 <tr>
                     <td><label for="hyttevalg">Velg hytte: </label></td>
-                    <td><select>
+                    <td><select id="hytteliste" onchange="changeValues()">
                             <option value="0">Månetoppen</option>
                             <option value="1">Tiurtoppen</option>
                             <option value="2">Fjellro</option>
@@ -79,8 +79,7 @@
         var harWifi  = [false, false, true, false, false, true, false, true, true];
         var harBat   = [false, false, false, false, true, true, false, false, false];
 
-        document.getElementById("timepris").innerHTML = timepris + ',-';
-        updatePriceForOneDayStay();
+        updatePriceForOneDayStay(0);
         
 
         var arrival = document.getElementById("arrival");
@@ -114,8 +113,14 @@
             return theDate;
         }
 
-        function updatePriceForOneDayStay() {
-            document.getElementById("total-timepris").innerHTML = timepris * document.getElementById("antall-timer").value + ',-';
+        function updatePriceForOneDayStay(index) {
+            document.getElementById("timepris").innerHTML = timepris[index] + ',-';
+            document.getElementById("total-timepris").innerHTML = timepris[index] * document.getElementById("antall-timer").value + ',-';
+        }
+
+        function changeValues() {
+            var hytteliste = document.getElementById("hytteliste");
+            updatePriceForOneDayStay(parseInt(hytteliste.selectedIndex));
         }
 
         $(document).ready(function() {
