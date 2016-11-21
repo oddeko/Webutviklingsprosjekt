@@ -91,6 +91,7 @@ $(document).ready(function(){
         $("#div1").load("sidene/sjø.html");
     });
 });
+
 // BILDEEFFEKT
 $(document).ready(function(){
 	$(".img-rounded").hover(function(){
