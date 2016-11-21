@@ -95,7 +95,7 @@ $(document).ready(function(){
 
 // BILDEEFFEKT
 $(document).ready(function(){
-	$(".img-rounded").hover(function(){
+	$(".img-opacity").hover(function(){
 		$(this).stop().animate({"opacity": "0.8"});
 		}, function(){
 		$(this).stop().animate({"opacity": "1.0"});
