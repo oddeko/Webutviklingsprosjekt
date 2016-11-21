@@ -1,11 +1,11 @@
 <h1>Bestill Hytte</h1>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         <form>
             <table class="table">
                 <tr>
                     <td><label for="hyttevalg">Velg hytte: </label></td>
-                    <td><select>
+                    <td><select id="hytteliste" onchange="updateForm()">
                             <option value="0">Månetoppen</option>
                             <option value="1">Tiurtoppen</option>
                             <option value="2">Fjellro</option>
@@ -19,24 +19,24 @@
                 </tr>
                 <tr>
                     <td> <label for="dato-ankomst">Ankomst:</label> </td>
-                    <td> <input type="date" id="arrival" name="dato-ankomst" required/> </td>
+                    <td> <input type="date" id="arrival" name="dato-ankomst" required onchange="updateForm()"/> </td>
                 </tr>
                 <tr>
                     <td> <label for="dato-avreise">Avreise: </label> </td>
-                    <td> <input type="date" id="departure" name="dato-avreise" required> </td>
+                    <td> <input type="date" id="departure" name="dato-avreise" required onchange="updateForm()"> </td>
                 </tr>
                 <tr id="jim">
-                    <td> <label for="timepris">Antall timer: <span id="timepris"></span></label> </td>
-                    <td> <input type="number" name="antall-timer" id="antall-timer" value="1" min="1" max="12" onchange="updatePriceForOneDayStay()">
-                         Total timepris: <span id="total-timepris"></span></td>
+                    <td> <label for="timepris">Antall timer: <span id="timepris"></span>,-</label> </td>
+                    <td> <input type="number" name="antall-timer" id="antall-timer" value="1" min="1" max="12" onchange="updateForm()" onkeyup="updateForm()">
+                         Total timepris: <span id="total-timepris">,-</span></td>
                 </tr>
                 <tr>
                     <td> <label for="vasking">Bestill vasking: 500,- </label> </td>
-                    <td> <input type="checkbox" name="vaskesjekk"> </td>
+                    <td> <input type="checkbox" name="vaskesjekk" onchange="updateForm()"> </td>
                 </tr>
                 <tr>
                     <td> <label for="tf-medlem">Medlem av turistforeningen: -15% </label> </td>
-                    <td> <input type="checkbox" name="tf-medlem"> </td>
+                    <td> <input type="checkbox" name="tf-medlem" onchange="updateForm()"> </td>
                 </tr>
                 <tr>
                     <td> <label for="fornavn">Fornavn: </label> </td>
@@ -58,17 +58,35 @@
                     <td> <label for="ekstra-informasjon">Ekstra informasjon: </label> </td>
                     <td> <textarea name="ekstra-informasjon" wrap="soft"></textarea> </td>
                 </tr>
+                <tr>
+                    <td><span id="totalpris"></span></td>
+                </tr>
             </table>
             <button type="submit">Bestill</button>
         </form>
     </div>
+    <div class="col-md-6">
+        
+    </div>
 </div>
 <script>
-        var today = new Date();
-        var todayFormat = formatDate(today)
-        var timepris = 5;
-        document.getElementById("timepris").innerHTML = timepris + ',-';
-        updatePriceForOneDayStay();
+        var hytteindex    = 0;
+        var today         = new Date();
+        var todayFormat   = formatDate(today)
+        var timepris      = [45, 55, 70, 40, 60, 75, 50, 65, 80];
+        var dognpris      = [685, 790, 905, 640, 780, 895, 690, 890, 1025];
+        var soverom       = [2, 2, 3, 2, 2, 3, 2, 3, 4];
+        var senger        = [4, 6, 8, 4, 5, 7, 5, 8, 12];
+        var harVann       = [false, true, true, true, true, true, false, false, true];
+        var harStrom      = [false, true, true, false, true, true, false, true, true];
+        var harUtedo      = [true, false, false, false, false, false, true, true, false];
+        var harWifi       = [false, false, true, false, false, true, false, true, true];
+        var harBat        = [false, false, false, false, true, true, false, false, false];
+        var vaskepris     = 500;
+        var medlemsrabatt = 0.15;
+        var totalpris     = 0;
+
+        updatePriceForOneDayStay(0);
         
 
         var arrival = document.getElementById("arrival");
@@ -102,8 +120,17 @@
             return theDate;
         }
 
-        function updatePriceForOneDayStay() {
-            document.getElementById("total-timepris").innerHTML = timepris * document.getElementById("antall-timer").value + ',-';
+        function updatePriceForOneDayStay(index) {
+            var antallTimer = document.getElementById("antall-timer").value;
+            document.getElementById("timepris").innerHTML = timepris[index];
+            document.getElementById("total-timepris").innerHTML = timepris[index] * antallTimer;
+        }
+
+        function updateForm() {
+            var hytteliste = document.getElementById("hytteliste");
+            hytteindex = parseInt(hytteliste.selectedIndex);
+            totalpris = 
+            updatePriceForOneDayStay(hytteindex);
         }
 
         $(document).ready(function() {
