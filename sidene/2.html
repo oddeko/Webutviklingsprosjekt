@@ -1,6 +1,6 @@
 <h1>Bestill Hytte</h1>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         <form>
             <table class="table">
                 <tr>
@@ -62,11 +62,23 @@
             <button type="submit">Bestill</button>
         </form>
     </div>
+    <div class="col-md-6">
+        
+    </div>
 </div>
 <script>
         var today = new Date();
         var todayFormat = formatDate(today)
-        var timepris = 5;
+        var timepris = [45, 55, 70, 40, 60, 75, 50, 65, 80];
+        var dognpris = [685, 790, 905, 640, 780, 895, 690, 890, 1025];
+        var soverom  = [2, 2, 3, 2, 2, 3, 2, 3, 4];
+        var senger   = [4, 6, 8, 4, 5, 7, 5, 8, 12];
+        var harVann  = [false, true, true, true, true, true, false, false, true];
+        var harStrom = [false, true, true, false, true, true, false, true, true];
+        var harUtedo = [true, false, false, false, false, false, true, true, false];
+        var harWifi  = [false, false, true, false, false, true, false, true, true];
+        var harBat   = [false, false, false, false, true, true, false, false, false];
+
         document.getElementById("timepris").innerHTML = timepris + ',-';
         updatePriceForOneDayStay();
         
