@@ -81,10 +81,20 @@ $(document).ready(function(){
         $("#div1").load("sidene/fjell.html");
     });
 });
+// SIDE-SJØ
+$(document).ready(function(){
+    $(".sjø").click(function(){
+		$("li").removeClass("active");
+		$("#side3").addClass("active");
+		$("#slideshow").hide();
+		$(".col-sm-2").show();
+        $("#div1").load("sidene/sjø.html");
+    });
+});
 // BILDEEFFEKT
 $(document).ready(function(){
 	$(".img-rounded").hover(function(){
-		$(this).stop().animate({"opacity": "0.85"});
+		$(this).stop().animate({"opacity": "0.8"});
 		}, function(){
 		$(this).stop().animate({"opacity": "1.0"});
 	});
