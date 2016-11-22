@@ -167,20 +167,26 @@
         $(document).ready(function() {
 
             $("#arrival").change(function() {
-                arrivalDate = new Date(document.getElementById("arrival").value);
-                departureDate = new Date(document.getElementById("departure").value);
-                antallDager = calculateDays(arrivalDate, departureDate);
-                updateDeparturePicker(arrivalDate);
                 setHourlyPriceVisibility();
+
+                arrivalDate = new Date(document.getElementById("arrival").value);
+                departureDate = arrivalDate;
+
+                updateDeparturePicker(arrivalDate);
+                antallDager = calculateDays(arrivalDate, departureDate);
+
                 updateForm();
                 updateTotal();
             });
 
             $("#departure").change(function() {
                 setHourlyPriceVisibility();
+
                 arrivalDate = new Date(document.getElementById("arrival").value);
                 departureDate = new Date(document.getElementById("departure").value);
+
                 antallDager = calculateDays(arrivalDate, departureDate);
+
                 updateForm();
                 updateTotal();
             });
