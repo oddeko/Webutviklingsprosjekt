@@ -3,37 +3,46 @@
 <script src="script/javascript.js"></script>
 <button class="side3 knapp">Tilbake</button>
 <h1>Fjellhytter</h1>
-<div class="slideshow-main img-float">
-<div class="slideshow-container">
-<div class="mySlides">
-  <img class="img-rounded" src="images/skog.jpg" height="250" width="300">
-</div>
-<div class="mySlides">
-  <img class="img-rounded" src="images/sjø.jpg" height="250" width="300">
-</div>
-<div class="mySlides">
-  <img class="img-rounded" src="images/fjell.jpg" height="250" width="300">
-</div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+<div class="my-slider">
+	<ul>
+		<li><img src="images/fjell.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/skog.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/sjø.jpg" class="img-float img-rounded" width="300" height="250"></li>
+	</ul>
 </div>
 <h2>Månetoppen</h2>
 <p>
 Hytte med flott utsikt. Månetoppen ligger fint til i et naturskjønt område, 4 km fra Oppheim sentrum. Flotte turmuligheter om sommeren og et skieldorado om vinteren.
 </p>
 <br><button id="2" class="knapp side2">Bestill</button>
-<br>
+<hr>
+<div class="my-slider">
+	<ul>
+		<li><img src="images/fjell.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/skog.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/sjø.jpg" class="img-float img-rounded" width="300" height="250"></li>
+	</ul>
+</div>
 <h2>Tiurtoppen</h2>
 <p>
 Denne fjellhytta ligger i grense mellom skog og fjell. Stille og rolig område med flott turterreng.
 </p>
+<hr>
+<div class="my-slider">
+	<ul>
+		<li><img src="images/fjell.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/skog.jpg" class="img-float img-rounded" width="300" height="250"></li>
+		<li><img src="images/sjø.jpg" class="img-float img-rounded" width="300" height="250"></li>
+	</ul>
+</div>
 <h2>Fjellro</h2>
 <p>
 En koselig hytte som ligger fint til i naturen ved Nordpå Fjellhotell, med langrennsløyper rett utenfor
 </p>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="scripts/unslider.js"></script>
+<script>
+		jQuery(document).ready(function($) {
+			$('.my-slider').unslider();
+		});
+	</script>
