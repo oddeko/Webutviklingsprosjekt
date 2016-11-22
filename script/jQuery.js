@@ -37,7 +37,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
     $("#div1").load("sidene/3.html");
-		$(".row.content").css("height","1050px");
+		$(".row.content").css("height","1100px");
     $("footer").hide();
     });
 });
