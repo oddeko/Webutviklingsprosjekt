@@ -72,8 +72,8 @@ footer {
 /* Standardknapp slutt*/
 /* Kode for slider2 */
 .my-slider{width: 340px;}
-.unslider{overflow:auto;margin:0;padding:0}
-.unslider-wrap{position:relative}
+.unslider{overflow:auto;margin:0;padding:0;border-radius: 6px;}
+.unslider-wrap{position:relative;}
 .unslider-wrap.unslider-carousel>li{float:left}
 .unslider-vertical>ul{height:100%}
 .unslider-vertical li{float:none;width:100%}
