@@ -73,7 +73,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
     $("#div1").load("sidene/skog.html");
-		$(".row.content").css("height","750px");
+		$(".row.content").css("height","1050px");
     });
 });
 // SIDE-FJELL
@@ -95,7 +95,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
     $("#div1").load("sidene/sjø.html");
-		$(".row.content").css("height","750px");
+		$(".row.content").css("height","1050px");
     });
 });
 
