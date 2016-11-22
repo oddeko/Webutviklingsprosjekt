@@ -13,8 +13,6 @@ setInterval(function() {
 // HOVEDSIDE
 $(document).ready(function(){
     $(".side1").click(function(){
-		$("#slideshow").show();
-		$(".col-sm-2").show();
     });
 });
 // SIDE2
