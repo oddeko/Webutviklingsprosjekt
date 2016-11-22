@@ -158,9 +158,9 @@
             document.getElementById("totalpris").innerHTML = totalpris;
         }
 
-        function calculateDays() {
+        function calculateDays(first, second) {
             var msDay = 24*60*60*1000; 
-            var days = Math.round((departureDate.getTime() - arrivalDate.getTime())/(msDay));
+            var days = Math.round((second.getTime() - first.getTime())/(msDay));
             return days + 1;
         }
 
@@ -169,7 +169,7 @@
             $("#arrival").change(function() {
                 arrivalDate = new Date(document.getElementById("arrival").value);
                 departureDate = new Date(document.getElementById("departure").value);
-                antallDager = calculateDays();
+                antallDager = calculateDays(arrivalDate, departureDate);
                 updateDeparturePicker(arrivalDate);
                 setHourlyPriceVisibility();
                 updateForm();
@@ -180,7 +180,7 @@
                 setHourlyPriceVisibility();
                 arrivalDate = new Date(document.getElementById("arrival").value);
                 departureDate = new Date(document.getElementById("departure").value);
-                antallDager = calculateDays();
+                antallDager = calculateDays(arrivalDate, departureDate);
                 updateForm();
                 updateTotal();
             });
