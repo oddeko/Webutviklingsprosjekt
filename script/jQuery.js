@@ -25,7 +25,7 @@ $(document).ready(function(){
 		$("#myNavbar").removeClass("in"); // Gjemmer dropdown-menyen ved menyvalg.
 		$("#slideshow").hide(); // Gjemmer slideshow
 		$(".col-sm-2").hide(); // Gjemmer sidekollonnen.
-        $("#div1").load("sidene/2.html"); // Laster inn side "2".
+    $("#div1").load("sidene/2.html"); // Laster inn side "2".
 		$(".row.content").css("height","750px"); // Setter høyden på container ettersom den nekter å automatisk tilpasse seg.
     });
 });
@@ -37,7 +37,7 @@ $(document).ready(function(){
 		$("#myNavbar").removeClass("in");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/3.html");
+    $("#div1").load("sidene/3.html");
 		$(".row.content").css("height","1050px");
     });
 });
@@ -49,7 +49,7 @@ $(document).ready(function(){
 		$("#myNavbar").removeClass("in");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/4.html");
+    $("#div1").load("sidene/4.html");
 		$(".row.content").css("height","450px");
     });
 });
@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$("#myNavbar").removeClass("in");
 		$("#slideshow").show();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/5.html");
+    $("#div1").load("sidene/5.html");
 		$(".row.content").css("height","900px");
     });
 });
@@ -72,7 +72,7 @@ $(document).ready(function(){
 		$(".side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/skog.html");
+    $("#div1").load("sidene/skog.html");
 		$(".row.content").css("height","750px");
     });
 });
@@ -83,7 +83,7 @@ $(document).ready(function(){
 		$(".side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/fjell.html");
+    $("#div1").load("sidene/fjell.html");
 		$(".row.content").css("height","750px");
     });
 });
@@ -94,11 +94,10 @@ $(document).ready(function(){
 		$(".side3").addClass("active");
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
-        $("#div1").load("sidene/sjø.html");
+    $("#div1").load("sidene/sjø.html");
 		$(".row.content").css("height","750px");
     });
 });
-
 
 // BILDEEFFEKT
 $(document).ready(function(){
