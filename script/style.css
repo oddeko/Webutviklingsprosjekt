@@ -24,7 +24,9 @@ footer {
 	padding-left:10px;
 }
 }
-
+.hytte {
+	height: 300px
+}
 /* Slideshow1 */
 #slideshow {
 	position:relative;
