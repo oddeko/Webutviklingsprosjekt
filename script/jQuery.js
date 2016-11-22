@@ -84,7 +84,7 @@ $(document).ready(function(){
 		$("#slideshow").hide();
 		$(".col-sm-2").show();
     $("#div1").load("sidene/fjell.html");
-		$(".row.content").css("height","750px");
+		$(".row.content").css("height","1050px");
     });
 });
 // SIDE-SJØ
