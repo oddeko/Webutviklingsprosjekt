@@ -60,7 +60,7 @@ footer {
 	display:block;
 	margin:auto;
 }
-/* Standardknapper */
+/* Standardknapp */
 .knapp {
   background-color: white;
   color: black;
@@ -69,8 +69,9 @@ footer {
   border-radius: 8px;
 }
 .knapp:hover {background-color:lightskyblue;}
+/* Standardknapp slutt*/
 /* Kode for slider2 */
-.my-slider{width: 300px;}
+.my-slider{width: 340px;}
 .unslider{overflow:auto;margin:0;padding:0}
 .unslider-wrap{position:relative}
 .unslider-wrap.unslider-carousel>li{float:left}
