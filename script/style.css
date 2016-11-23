@@ -25,7 +25,8 @@ footer {
 }
 }
 .hytte {
-	height: 400px
+	min-height: 350px;
+	height: auto;
 }
 /* Slideshow1 */
 #slideshow {
