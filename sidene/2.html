@@ -1,3 +1,4 @@
+<style>.col-sm-8{width:100%;}</style>
 <h1>Bestill Hytte</h1>
 <div class="row">
     <div class="col-md-6">
@@ -13,7 +14,7 @@
                             <option value="4">Lykkeli</option>
                             <option value="5">Nettbua</option>
                             <option value="6">Bjørnehiet</option>
-                            <option value="7">Furubo</option> 
+                            <option value="7">Furubo</option>
                             <option value="8">Trollstua</option>
                     </select></td>
                 </tr>
@@ -133,7 +134,7 @@
 
 
         updatePriceForOneDayStay(0);
-        
+
 
         var arrival = document.getElementById("arrival");
         var departure = document.getElementById("departure");
@@ -190,7 +191,7 @@
             document.getElementById("output-utedo")    .innerHTML = harUtedo[hytteindex] ? "Ja": "Nei";
             document.getElementById("output-wifi")     .innerHTML = harWifi[hytteindex]  ? "Ja": "Nei";
             document.getElementById("output-båt")      .innerHTML = harBat[hytteindex]   ? "Ja": "Nei";
-            
+
         }
 
         function updateTotal() {
@@ -209,7 +210,7 @@
         }
 
         function calculateDays(first, second) {
-            var msDay = 24*60*60*1000; 
+            var msDay = 24*60*60*1000;
             var days = Math.round((second.getTime() - first.getTime())/(msDay));
             return days + 1;
         }
