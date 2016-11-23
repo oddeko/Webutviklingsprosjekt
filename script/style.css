@@ -114,7 +114,7 @@ footer {
 /* Kode for slider2 slutt */
 #bestillingsbilde {}
 #bestillingsskjema.table {text-align: left;}
-#bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;}
+.bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
