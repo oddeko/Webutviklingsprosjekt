@@ -1,5 +1,6 @@
 ﻿@charset "utf-8";
 /* CSS Document */
+    /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
 	border-radius: 0;
 	color: black;
@@ -33,6 +34,7 @@ footer {
   display: inline-block;
   height: 240px;
 	overflow:hidden;
+
 	border-top-style:solid;
 	border-bottom-style:solid;
 	border-width:thin;
@@ -58,9 +60,9 @@ footer {
 	display:block;
 	margin:auto;
 }
-.tabell{width:33%} /* Gjør at hver kolonne i tabell blir like stor */
-
-.knapp {/* Standardknapp */
+.tabell{width:33%}
+/* Standardknapp */
+.knapp {
   background-color: white;
   color: black;
   border: 2px solid lightskyblue;
@@ -99,7 +101,7 @@ footer {
   background: #fff;
   cursor: default;
 }
-/* Kode for slider2 slutt*/
+/* Kode for slider2 slutt */
 /* Liste over inkluderte attributter på hytter */
 .hytteinkl .glyphicon{
   padding-right: 5px; /* mellomrom mellom ikon og tekst */
