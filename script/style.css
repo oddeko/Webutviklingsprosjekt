@@ -71,6 +71,7 @@ footer {
   border-radius: 8px;
 }
 .knapp:hover {background-color:lightskyblue;}
+.knappdisabled {border-color: grey}
 .knapphoyre {position: relative;top:70%;right:0px;}
 /* Standardknapp slutt*/
 /* Kode for slider2 */
