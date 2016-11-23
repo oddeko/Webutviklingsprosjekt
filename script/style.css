@@ -61,7 +61,7 @@ footer {
 	display:block;
 	margin:auto;
 }
-.tabell{width:33%}
+.tabell{width:33%;text-align: center;}
 /* Standardknapp */
 .knapp {
   background-color: white;
