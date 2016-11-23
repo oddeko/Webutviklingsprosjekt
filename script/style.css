@@ -106,8 +106,10 @@ footer {
 }
 .hytteinkl li {
   padding-top: 2px; /* mellomrom mellom listeelementer */
+	
 }
-/* Kode for slider2 slutt */
+#bestillingsbilde {margin-left: 15px;
+}
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
