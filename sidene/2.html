@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-6">
         <form>
-            <table class="table">
+            <table>
                 <tr>
                     <td><label for="hyttevalg">Velg hytte: </label></td>
                     <td><select id="hytteliste" onchange="updateForm()">
@@ -64,12 +64,12 @@
                 </tr>
             </table>
             <button class="knapp" type="submit">Bestill</button>
+            <br>
         </form>
     </div>
-    <br>
     <div class="col-md-6" id="bestillingsoutput">
         <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg" width="340"/>
-        <table class="table" id="bestillingstable">
+        <table class="table table-striped" id="bestillingstable">
             <tr>
                 <th>Timepris: </th>
                 <td id="output-timepris"></td>
@@ -94,8 +94,10 @@
                 <th>Wifi: </th>
                 <td id="output-wifi"></td>
             </tr>
-            <tr>
+            <tr id="rowboat">
                 <th>Tilgang til båt: </th>
+                <td></td>
+                <td></td>
                 <td id="output-båt"></td>
             </tr>
 
@@ -179,14 +181,15 @@
             hytteindex = parseInt(hytteliste.selectedIndex);
             updatePriceForOneDayStay(hytteindex);
             document.getElementById("bestillingsbilde").setAttribute("src", "./images/hyttebilder/" + bilder[hytteindex]);
-            document.getElementById("output-timepris").innerHTML=timepris[hytteindex];
-            document.getElementById("output-døgnpris").innerHTML=dognpris[hytteindex];
-            document.getElementById("output-soverom").innerHTML=soverom[hytteindex];
-            document.getElementById("output-senger").innerHTML=senger[hytteindex];
-            document.getElementById("output-vann").innerHTML=harVann[hytteindex] ? "Ja": "Nei";
-            document.getElementById("output-strøm").innerHTML=harStrom[hytteindex] ? "Ja": "Nei";
-            document.getElementById("output-utedo").innerHTML=harUtedo[hytteindex] ? "Ja": "Nei";
-            document.getElementById("output-wifi").innerHTML=harWifi[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-timepris") .innerHTML = timepris[hytteindex];
+            document.getElementById("output-døgnpris") .innerHTML = dognpris[hytteindex];
+            document.getElementById("output-soverom")  .innerHTML = soverom[hytteindex];
+            document.getElementById("output-senger")   .innerHTML = senger[hytteindex];
+            document.getElementById("output-vann")     .innerHTML = harVann[hytteindex]  ? "Ja": "Nei";
+            document.getElementById("output-strøm")    .innerHTML = harStrom[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-utedo")    .innerHTML = harUtedo[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-wifi")     .innerHTML = harWifi[hytteindex]  ? "Ja": "Nei";
+            document.getElementById("output-båt")      .innerHTML = harBat[hytteindex]   ? "Ja": "Nei";
             
         }
 
@@ -212,6 +215,7 @@
         }
 
         $(document).ready(function() {
+            toggleBoatVisibility();
 
             $("#arrival").change(function() {
                 setHourlyPriceVisibility();
@@ -226,6 +230,18 @@
                 updateTotal();
                 setHourlyPriceVisibility();
             });
+
+            $("#hytteliste").change(function() {
+                toggleBoatVisibility();
+            });
+
+            function toggleBoatVisibility() {
+                if (hytteindex >= 3 && hytteindex <= 5) {
+                    $("#rowboat").show();
+                } else {
+                    $("#rowboat").hide();
+                }
+            }
 
             $("#departure").change(function() {
                 setHourlyPriceVisibility();
