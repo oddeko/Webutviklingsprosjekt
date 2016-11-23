@@ -112,7 +112,7 @@ footer {
   padding-top: 2px; /* mellomrom mellom listeelementer */
 }
 /* Kode for slider2 slutt */
-#bestillingsbilde {}
+#bestillingsbilde {border-top-right-radius: 6px;border-top-left-radius: 6px;}
 #bestillingsskjema.table {text-align: left;}
 .bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;}
 /*!
