@@ -67,37 +67,37 @@
         </form>
     </div>
     <div class="col-md-6">
-        <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg"/>
+        <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg" width="340"/>
         <table class="table">
             <tr>
                 <td>Timepris: </td>
                 <td id="output-timepris"></td>
-            </tr>
-            <tr>
+            <!-- </tr>
+            <tr> -->
                 <td>Døgnpris: </td>
                 <td id="output-døgnpris"></td>
             </tr>
             <tr>
                 <td>Antall soverom: </td>
                 <td id="output-soverom"></td>
-            </tr>
-            <tr>
+           <!--  </tr>
+            <tr> -->
                 <td>Antall senger: </td>
                 <td id="output-senger"></td>
             </tr>
             <tr>
                 <td>Innlagt vann: </td>
                 <td id="output-vann"></td>
-            </tr>
-            <tr>
+            <!-- </tr>
+            <tr> -->
                 <td>Innlagt strøm: </td>
                 <td id="output-strøm"></td>
             </tr>
             <tr>
                 <td>Utedo: </td>
                 <td id="output-utedo"></td>
-            </tr>
-            <tr>
+            <!-- </tr>
+            <tr> -->
                 <td>Wifi: </td>
                 <td id="output-wifi"></td>
             </tr>
@@ -190,6 +190,10 @@
             document.getElementById("output-døgnpris").innerHTML=dognpris[hytteindex];
             document.getElementById("output-soverom").innerHTML=soverom[hytteindex];
             document.getElementById("output-senger").innerHTML=senger[hytteindex];
+            document.getElementById("output-vann").innerHTML=harVann[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-strøm").innerHTML=harStrom[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-utedo").innerHTML=harUtedo[hytteindex] ? "Ja": "Nei";
+            document.getElementById("output-wifi").innerHTML=harWifi[hytteindex] ? "Ja": "Nei";
             
         }
 
