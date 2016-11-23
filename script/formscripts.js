@@ -91,7 +91,7 @@ function updateTotal() {
     if (antallDager == 1) {
         totalpris = timepris[hytteindex]*antallTimer;
     } else {
-        totalpris = dognpris[hytteindex]*(antallDager - 1);
+        totalpris = Math.abs(dognpris[hytteindex]*(antallDager - 1));
     }
     if (document.getElementById("vaskesjekk").checked){
         totalpris+=vaskepris;
