@@ -67,7 +67,45 @@
         </form>
     </div>
     <div class="col-md-6">
-        
+        <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg"/>
+        <table class="table">
+            <tr>
+                <td>Timepris: </td>
+                <td id="output-timepris"></td>
+            </tr>
+            <tr>
+                <td>Døgnpris: </td>
+                <td id="output-døgnpris"></td>
+            </tr>
+            <tr>
+                <td>Antall soverom: </td>
+                <td id="output-soverom"></td>
+            </tr>
+            <tr>
+                <td>Antall senger: </td>
+                <td id="output-senger"></td>
+            </tr>
+            <tr>
+                <td>Innlagt vann: </td>
+                <td id="output-vann"></td>
+            </tr>
+            <tr>
+                <td>Innlagt strøm: </td>
+                <td id="output-strøm"></td>
+            </tr>
+            <tr>
+                <td>Utedo: </td>
+                <td id="output-utedo"></td>
+            </tr>
+            <tr>
+                <td>Wifi: </td>
+                <td id="output-wifi"></td>
+            </tr>
+            <tr>
+                <td>Tilgang til båt: </td>
+                <td id="output-båt"></td>
+            </tr>
+
     </div>
 </div>
 <script>
@@ -84,6 +122,9 @@
         var harUtedo      = [true,  false, false, false, false, false, true,  true,  false];
         var harWifi       = [false, false, true,  false, false, true,  false, true,  true];
         var harBat        = [false, false, false, false, true,  true,  false, false, false];
+        var bilder        = ["månetoppen.jpg", "tiurtoppen_stue.jpg", "fjell.jpg",
+                             "fjordgløtt.jpg", "lykkeli.jpg", "nettbua.jpg",
+                             "bjørnehiet.jpg", "furubo.jpg", "trollstua_stue.jpg"];
 
         var arrivalDate   = today;
         var departureDate = today;
@@ -93,6 +134,8 @@
         var vaskepris     = 500;
         var medlemsrabatt = 0.15;
         var totalpris     = 0;
+
+
 
         updatePriceForOneDayStay(0);
         
@@ -104,6 +147,7 @@
         arrival.value = todayFormat;
         departure.value = todayFormat;
         updateDeparturePicker(arrivalDate);
+        updateForm();
 
         function updateDeparturePicker(newArrivalDate) {
             // set the min date of departure to the same date as arrival
@@ -141,6 +185,10 @@
             var hytteliste = document.getElementById("hytteliste");
             hytteindex = parseInt(hytteliste.selectedIndex);
             updatePriceForOneDayStay(hytteindex);
+            document.getElementById("bestillingsbilde").setAttribute("src", "./images/hyttebilder/" + bilder[hytteindex]);
+            document.getElementById("output-timepris").innerHTML=timepris[hytteindex];
+            document.getElementById("output-døgnpris").innerHTML=dognpris[hytteindex];
+            
         }
 
         function updateTotal() {
