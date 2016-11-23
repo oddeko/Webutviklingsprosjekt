@@ -110,7 +110,7 @@ footer {
 }
 /* Kode for slider2 slutt */
 #bestillingsbilde {margin-left: 15px;}
-#bestillingsskjema .th{text-align: left;}
+#bestillingsskjema.table {text-align: left;}
 #bestillingoutput {border-radius: 6px;border-style:solid;border-color:black;}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
