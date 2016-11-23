@@ -101,6 +101,13 @@ footer {
   background: #fff;
   cursor: default;
 }
+/* Liste over inkluderte attributter på hytter */
+.hytteinkl .glyphicon{
+  padding-right: 5px; /* mellomrom mellom ikon og tekst */
+}
+.hytteinkl li {
+  padding-top: 2px; /* mellomrom mellom listeelementer */
+}
 /* Kode for slider2 slutt */
 
 /*!
