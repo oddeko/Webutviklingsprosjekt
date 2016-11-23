@@ -115,6 +115,7 @@ footer {
 #bestillingsbilde {border-top-right-radius: 6px;border-top-left-radius: 6px;}
 #bestillingsskjema.table {text-align: left;}
 .bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;}
+.w100 {width: 100%}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
