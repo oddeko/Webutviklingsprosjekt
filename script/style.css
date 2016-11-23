@@ -70,7 +70,7 @@ footer {
   border-radius: 8px;
 }
 .knapp:hover {background-color:lightskyblue;}
-.knapphoyre {float:right;}
+.knapphoyre {position: relative;top:70%;right:0px;}
 /* Standardknapp slutt*/
 /* Kode for slider2 */
 .my-slider{width: 340px;}
