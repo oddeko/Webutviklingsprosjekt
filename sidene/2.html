@@ -2,10 +2,9 @@
 <div class="row">
     <div class="col-md-6">
         <form>
-            <table class="table">
-                <tr>
-                    <td><label for="hyttevalg">Velg hytte: </label></td>
-                    <td><select id="hytteliste" onchange="updateForm()">
+
+                   <label for="hyttevalg">Velg hytte: </label>
+                   <select id="hytteliste" onchange="updateForm()">
                             <option value="0">Månetoppen</option>
                             <option value="1">Tiurtoppen</option>
                             <option value="2">Fjellro</option>
@@ -15,53 +14,56 @@
                             <option value="6">Bjørnehiet</option>
                             <option value="7">Furubo</option> 
                             <option value="8">Trollstua</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td> <label for="dato-ankomst">Ankomst:</label> </td>
-                    <td> <input type="date" id="arrival" name="dato-ankomst" required/> </td>
-                </tr>
-                <tr>
-                    <td> <label for="dato-avreise">Avreise: </label> </td>
-                    <td> <input type="date" id="departure" name="dato-avreise" required/> </td>
-                </tr>
-                <tr id="timeteller">
-                    <td> <label for="timepris">Antall timer: <span id="timepris"></span>,-</label> </td>
-                    <td> <input type="number" name="antall-timer" id="antall-timer" value="1" min="1" max="12" onchange="updateForm()" onkeyup="updateForm()">
-                         Total timepris: <span id="total-timepris">,-</span></td>
-                </tr>
-                <tr>
-                    <td> <label for="vasking">Bestill vasking: 500,- </label> </td>
-                    <td> <input type="checkbox" name="vaskesjekk" id="vaskesjekk"/> </td>
-                </tr>
-                <tr>
-                    <td> <label for="tf-medlem">Medlem av turistforeningen: -15% </label> </td>
-                    <td> <input type="checkbox" name="tf-medlem" id="tf-medlem"> </td>
-                </tr>
-                <tr>
-                    <td> <label for="fornavn">Fornavn: </label> </td>
-                    <td> <input type="text" id="jim" name="fornavn" placeholder="Ola *" required> </td>
-                </tr>
-                <tr>
-                    <td> <label for="etternavn">Etternavn: </label> </td>
-                    <td> <input type="text" name="etternavn" placeholder="Nordmann *" required> </td>
-                </tr>
-                <tr>
-                    <td> <label for="tlf">Tlf: </label> </td>
-                    <td> <input type="text" name="tlf" placeholder="12345678 *" pattern="^\d{8}$" required> </td>
-                </tr>
-                <tr>
-                    <td> <label for="email">Email: </label> </td>
-                    <td> <input type="email" name="email" placeholder="olanord@example.com *" required> </td>
-                </tr>
-                <tr>
-                    <td> <label for="ekstra-informasjon">Ekstra informasjon: </label> </td>
-                    <td> <textarea name="ekstra-informasjon" wrap="soft"></textarea> </td>
-                </tr>
-                <tr>
-                    <td><b>Totalpris:</b></td>
-                    <td><span id="totalpris"></span></td>
-                </tr>
+                    </select>
+                
+               
+                    <label for="dato-ankomst">Ankomst:</label> 
+                    <input type="date" id="arrival" name="dato-ankomst" required/> 
+                    <br>
+                
+               
+                    <label for="dato-avreise">Avreise: </label> 
+                    <input type="date" id="departure" name="dato-avreise" required/>
+                    <br>
+                
+                <div id="timeteller">
+                    <label for="timepris">Antall timer: <span id="timepris"></span>,-</label> 
+                    <input type="number" name="antall-timer" id="antall-timer" value="1" min="1" max="12" onchange="updateForm()" onkeyup="updateForm()">
+                         Total timepris: <span id="total-timepris">,-</span>
+                </div>
+
+               
+                    <label for="vasking">Bestill vasking: 500,- </label> 
+                    <input type="checkbox" name="vaskesjekk" id="vaskesjekk"/> 
+                
+               
+                    <label for="tf-medlem">Medlem av turistforeningen: -15% </label> 
+                    <input type="checkbox" name="tf-medlem" id="tf-medlem"> 
+                
+               
+                    <label for="fornavn">Fornavn: </label> 
+                    <input type="text" id="jim" name="fornavn" placeholder="Ola *" required> 
+                
+               
+                    <label for="etternavn">Etternavn: </label> 
+                    <input type="text" name="etternavn" placeholder="Nordmann *" required> 
+                
+               
+                    <label for="tlf">Tlf: </label> 
+                    <input type="text" name="tlf" placeholder="12345678 *" pattern="^\d{8}$" required> 
+                
+               
+                    <label for="email">Email: </label> 
+                    <input type="email" name="email" placeholder="olanord@example.com *" required> 
+                
+               
+                    <label for="ekstra-informasjon">Ekstra informasjon: </label> 
+                    <textarea name="ekstra-informasjon" wrap="soft"></textarea> 
+                
+               
+                   <b>Totalpris:</b>
+                   <span id="totalpris"></span>
+                
             </table>
             <button class="knapp" type="submit">Bestill</button>
         </form>
