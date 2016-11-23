@@ -25,7 +25,7 @@ footer {
 }
 }
 .hytte {
-	height: 400px
+	height: 350px
 }
 /* Slideshow1 */
 #slideshow {
@@ -53,7 +53,7 @@ footer {
 }
 /* Slideshow1 slutt */
 .hytter {
-  min-height:600px;
+  min-height:300px;
   height: auto;
 }
 .midstill {
