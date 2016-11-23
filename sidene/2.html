@@ -1,9 +1,9 @@
 <style>.col-sm-8{width:100%;}</style>
 <h1>Bestill Hytte</h1>
 <div class="row">
-    <div class="col-md-6">
-        <form>
-            <table>
+    <div class="col-md-7">
+        <form action="http://www.iie.hist.no/fag/webutvikling1/prosjekt/behandle.php" method="post">
+            <table class="table">
                 <tr>
                     <td><label for="hyttevalg">Velg hytte: </label></td>
                     <td><select id="hytteliste" onchange="updateForm()">
@@ -53,23 +53,20 @@
                 </tr>
                 <tr>
                     <td> <label for="email">Email: </label> </td>
-                    <td> <input type="email" name="email" placeholder="olanord@example.com *" required> </td>
+                    <td> <input type="email" name="epost" placeholder="olanord@example.com *" required> </td>
                 </tr>
                 <tr>
-                    <td> <label for="ekstra-informasjon">Ekstra informasjon: </label> </td>
-                    <td> <textarea name="ekstra-informasjon" wrap="soft"></textarea> </td>
-                </tr>
-                <tr>
-                    <td><b>Totalpris:</b></td>
-                    <td><span id="totalpris"></span></td>
+                    <td><h3>Totalpris:</h3></td>
+                    <td><h3><span id="totalpris"></span>,-</h3></td>
                 </tr>
             </table>
             <button class="knapp" type="submit">Bestill</button>
             <br>
         </form>
     </div>
-    <div class="col-md-6" id="bestillingsoutput">
-        <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg" width="340"/>
+    <div class="col-md-1"></div>
+    <div class="col-md-4" id="bestillingsoutput">
+        <img class="img-responsive img-rounded" id="bestillingsbilde" src="bjørnehiet.jpg" width="300"/>
         <table class="table table-striped" id="bestillingstable">
             <tr>
                 <th>Timepris: </th>
@@ -267,8 +264,10 @@
             function setHourlyPriceVisibility() {
                 if ($("#arrival").val() == $("#departure").val()) {
                     $("#timeteller").show();
+                    $("#antall-timer").prop("disabled", false);
                 } else {
                     $("#timeteller").hide();
+                    $("#antall-timer").prop("disabled", true);
                 }
             }
         });
