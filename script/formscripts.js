@@ -140,6 +140,11 @@ function calculateDays(first, second) {
 $(document).ready(function() {
     toggleBoatVisibility();
 
+    // When changing the arrival-date, a lot of things need, or in some cases "need" to happen.
+    // whenever you change the arrivaldata, we simply set departuredate to be equal to the arrival
+    // date to, attempt to, remove any possibility of choosing a period with departure ealier than
+    // arrival. This includes changing the value on the screen, as well as in the script variable.
+    // Thus, we also need to update the form, as well, as the total price.
     $("#arrival").change(function() {
         setHourlyPriceVisibility();
 
@@ -158,6 +163,7 @@ $(document).ready(function() {
         toggleBoatVisibility();
     });
 
+    // shows, or hides, the output row displaying whether or not a cabin has access to a boat or not.
     function toggleBoatVisibility() {
         if (hytteindex >= 3 && hytteindex <= 5) {
             $("#rowboat").show();
@@ -167,17 +173,18 @@ $(document).ready(function() {
     }
 
     $("#departure").change(function() {
-        setHourlyPriceVisibility();
+        setHourlyPriceVisibility(); // in case changing departure sets the dep and arr-date to the same, or, otherwise, from the opposite.
 
         arrivalDate = new Date(document.getElementById("arrival").value);
         departureDate = new Date(document.getElementById("departure").value);
-
         antallDager = calculateDays(arrivalDate, departureDate);
 
         updateForm();
         updateTotal();
     });
 
+    // due to the fact that we continuously update the total price, checking, or unchecking these
+    // also needs to update the total price.
     $("#vaskesjekk").click(function(){
         updateTotal();
     });
@@ -186,6 +193,10 @@ $(document).ready(function() {
         updateTotal();
     });
 
+    // disables the submitbutton if the checkbox for having read the
+    // terms of agreement button is not checked.
+    // this entire thing was pretty much added as a joke.
+    // but it works, so thats cool.
     $("#lestBrukeravtale").click(function() {
         if (document.getElementById("lestBrukeravtale").checked) {
             $("#bestillingsKnapp").removeAttr("disabled");
@@ -194,6 +205,11 @@ $(document).ready(function() {
         }
     })
 
+    // if arrival date and departuredate is the same, this function
+    // will show the row in the table containing the
+    // otherwise, it will hide it, since it is not used when staying more
+    // than one day. it will also disable the input to it is not sent on form submission
+    // when it is hidden, and then enable it again when it is visible.
     function setHourlyPriceVisibility() {
         if ($("#arrival").val() == $("#departure").val()) {
             $("#timeteller").show();
