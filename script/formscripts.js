@@ -146,8 +146,6 @@ $(document).ready(function() {
     // arrival. This includes changing the value on the screen, as well as in the script variable.
     // Thus, we also need to update the form, as well, as the total price.
     $("#arrival").change(function() {
-        setHourlyPriceVisibility();
-
         arrivalDate = new Date(document.getElementById("arrival").value);
         departureDate = arrivalDate;
 
