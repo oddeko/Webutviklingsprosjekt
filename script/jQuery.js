@@ -63,7 +63,7 @@ $(document).ready(function(){
 		$("#slideshow").show();
 		$(".col-sm-2").show();
     $("#div1").load("sidene/5.html");
-		$(".row.content").css("height","900px");
+		$(".row.content").css("height","950px");
     $("footer").show();
     });
 });
