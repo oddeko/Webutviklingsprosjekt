@@ -113,6 +113,9 @@ function updateTotal() {
     if (antallDager == 1) {
         totalpris = timepris[hytteindex]*antallTimer;
     } else {
+        // Staying from, for instance, one day, to the next day, counts as Staying
+        // for one day. thus you have to subtract 1 from "antallDager", so that
+        // you dont charge for an extra day.
         totalpris = Math.abs(dognpris[hytteindex]*(antallDager - 1));
     }
     if (document.getElementById("vaskesjekk").checked){
@@ -124,9 +127,13 @@ function updateTotal() {
     document.getElementById("totalpris").innerHTML = totalpris;
 }
 
+// calculates the number of days between two Date objects.
 function calculateDays(first, second) {
     var msDay = 24*60*60*1000;
     var days = Math.round((second.getTime() - first.getTime())/(msDay));
+    // we add one because, rather thn the number of days, its more the number of days in
+    // which you will be located in the cabin, or allegedly so.
+    // thus the odd sitatuon in which we add 1 here and subtract 1 updateTotal().
     return days + 1;
 }
 
