@@ -92,8 +92,8 @@ function updateForm() {
     hytteindex = parseInt(hytteliste.selectedIndex);
     updatePriceForOneDayStay(hytteindex);
     document.getElementById("bestillingsbilde") .setAttribute("src", "./images/hyttebilder/" + bilder[hytteindex]);
-    document.getElementById("output-timepris")  .innerHTML = timepris[hytteindex];
-    document.getElementById("output-døgnpris")  .innerHTML = dognpris[hytteindex];
+    document.getElementById("output-timepris")  .innerHTML = timepris[hytteindex] + ",-";
+    document.getElementById("output-døgnpris")  .innerHTML = dognpris[hytteindex] + ",-";
     document.getElementById("output-soverom")   .innerHTML = soverom[hytteindex];
     document.getElementById("output-senger")    .innerHTML = senger[hytteindex];
     document.getElementById("output-vann")      .innerHTML = harVann[hytteindex]  ? "Ja": "Nei"; // Ternary operator, just in case, super compact if replacement.
