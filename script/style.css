@@ -28,6 +28,7 @@ footer {
 .hytte {
 	min-height: 300px;
 	height: auto;
+	margin-bottom:20px;
 }
 /* Slideshow1 */
 #slideshow {
