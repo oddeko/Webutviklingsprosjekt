@@ -21,7 +21,7 @@ var harUtedo      = [true,  false, false, false, false, false, true,  true,  fal
 var harWifi       = [false, false, true,  false, false, true,  false, true,  true];
 var harBat        = [false, false, false, false, true,  true,  false, false, false];
 var bilder        = ["månetoppen.jpg", "tiurtoppen_stue.jpg", "fjell.jpg",
-                     "fjordgløtt.jpg", "lykkeli.jpg", "nettbua.jpg",
+                     "fjørgløtt.jpg", "lykkeli.jpg", "nettbua.jpg",
                      "bjørnehiet.jpg", "furubo.jpg", "trollstua_stue.jpg"];
 // These would also in most cases be stored in a databse.
 var vaskepris     = 500;
