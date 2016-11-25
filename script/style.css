@@ -138,6 +138,10 @@ footer {
 }
 .aa:hover {background-image:url("../images/aa_h.png");}
 .body-aa {font-size: 20px;} /* Denne klassen blir aktiv ved å trykke på "svaksyntknappen"*/
+.yr {
+	border:none;
+	margin:0;
+}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
