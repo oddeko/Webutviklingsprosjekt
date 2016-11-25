@@ -119,7 +119,7 @@ $(document).ready(function(){
 		$(this).stop().animate({"opacity": "1.0"});
 	});
 });
-//SVAKSYNT
+//SVAKSYNTKNAPP
 $(document).ready(function(){
 	$(".aa").click(function(){
 		$("body,p").toggleClass("body-aa")
