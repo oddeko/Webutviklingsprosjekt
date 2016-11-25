@@ -24,7 +24,7 @@ $(document).ready(function(){
   		$("#slideshow")  .hide(); // Gjemmer slideshow
   		$(".col-sm-2")   .hide(); // Gjemmer sidekollonnen.
       $("#div1")       .load("sidene/2.html"); // Laster inn side "2".
-  		$(".row.content").css("height","750px"); // Setter høyden på container ettersom den nekter å automatisk tilpasse seg.
+  		$(".row.content").css("height","750px"); // Setter høyden på container.
       $("footer")      .hide(); // Gjemmer footer
       $(".aa").hide(); // Gjemmer svaksyntknapp
     });
