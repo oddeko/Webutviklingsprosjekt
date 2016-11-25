@@ -122,6 +122,6 @@ $(document).ready(function(){
 //SVAKSYNTKNAPP
 $(document).ready(function(){
 	$(".aa").click(function(){
-		$("body,p").toggleClass("body-aa")
+		$("body,p").toggleClass("body-aa") // Ved klikk endres class på spesifike element og endres tilbake ved gjentatt klikk
 	});
 });
