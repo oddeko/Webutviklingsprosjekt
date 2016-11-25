@@ -5,14 +5,14 @@
 	border-radius: 0;
 	color: black;
 	height:130px;
-	position:static;
-	z-index:999;
+	position:static; /* Trengs for å bruke z-index */
+	z-index:999; /* Gjør at dropdownmenyen kommer øverst om den skulle kollidere med noen elementer */
 }
 .row.content {height: 400px;}
 .sidenav {height: 100%;}
 footer {
     color: grey;
-    padding: 10px;
+    padding: 10px; /* Setter margin på innsiden av footerelementet*/
 }
 @media screen and (max-width: 1000px) {
 .sidenav {
@@ -25,15 +25,15 @@ footer {
 	padding-right: 10px;
 }
 }
-.hytte {
+.hytte { /* Brukes for å holde hytteinfo samlet*/
 	min-height: 300px;
 	height: auto;
 	margin-bottom:30px;
 }
-.hyttebilder{
+.hyttebilder{ /* Settes på hyttebildene for å strekke bildet naturlig*/
 	width: 100%;
 	height: auto;
-	border-radius: 6px;
+	border-radius: 6px; /* Gjør hjørnene avrundet */
 }
 .hyttebilder2{
 	width:100%;
@@ -68,11 +68,11 @@ footer {
   min-height:300px;
   height: auto;
 }
-.midstill {
+.midstill { /* Midtstiller bildene i tabellkolonnene */
 	display:block;
 	margin:auto;
 }
-.tabell{width:33%;text-align: center;}
+.tabell{width:33%;text-align: center;} /* Gjør at hver kolonne i tabellen blir like stor og at tekst blir sentrert */
 /* Standardknapp */
 .knapp {
   background-color: white;
@@ -81,9 +81,8 @@ footer {
 	padding:10px;
   border-radius: 8px;
 }
-.knapp:hover:enabled {background-color:lightskyblue;}
-.knapp:disabled {border-color: silver;color:silver;}
-.knapphoyre {position: relative;top:70%;right:0px;}
+.knapp:hover:enabled {background-color:lightskyblue;} /* Det som skjer når man hovrer over en knapp som er aktiv*/
+.knapp:disabled {border-color: silver;color:silver;} /* Stil på knapp som ikke er aktiv */
 /* Standardknapp slutt*/
 /* Kode for slider2 */
 .my-slider{width: 100%;}
@@ -111,6 +110,7 @@ footer {
   border: 2px solid #fff;
   cursor: pointer;
 }
+/* Kode for slider2 slutt */
 .unslider-nav ol li.unslider-active {
   background: #fff;
   cursor: default;
@@ -122,12 +122,11 @@ footer {
 .hytteinkl li {
   padding-top: 2px; /* mellomrom mellom listeelementer */
 }
-/* Kode for slider2 slutt */
 #bestillingsbilde {border-top-right-radius: 6px;border-top-left-radius: 6px;}
-#bestillingsskjema.table {text-align: left;}
-.bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;}
-.w100 {width: 100%}
-.aa {
+#bestillingsskjema.table {text-align: left;} /* Setter venstrejustert tekst */
+.bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;} /* Setter kant på elementet som bruker klassen */
+.w100 {width: 100%} /* Klasse for å sette 100% bredde på element */
+.aa { /* klasse for svaksyntknapp*/
 	width: 100px;
 	height: 100px;
 	position: fixed;
@@ -138,7 +137,7 @@ footer {
 	border-bottom-right-radius: 6px;
 }
 .aa:hover {background-image:url("../images/aa_h.png");}
-.body-aa {font-size: 20px;}
+.body-aa {font-size: 20px;} /* Denne klassen blir aktiv ved å trykke på "svaksyntknappen"*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
