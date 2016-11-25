@@ -124,7 +124,7 @@ footer {
 }
 #bestillingsbilde {border-top-right-radius: 6px;border-top-left-radius: 6px;}
 #bestillingsskjema.table {text-align: left;} /* Setter venstrejustert tekst */
-.bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;} /* Setter kant på elementet som bruker klassen */
+.bestillingsoutput {border-radius: 6px;border-style:solid;border-width: thin;border-color:silver;} /* Definerer kantstil på bestillingsskjema */
 .w100 {width: 100%} /* Klasse for å sette 100% bredde på element */
 .aa { /* klasse for svaksyntknapp*/
 	width: 100px;
