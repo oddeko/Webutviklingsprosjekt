@@ -20,7 +20,7 @@ $(document).ready(function(){
     $(".side2").click(function(){ // Utfører gitte handlinger ved klikk på element med ID: "side2".
   		$("li")          .removeClass("active"); // Fjerner klassen "active" fra elementer med li(ste)-tag.
   		$(".side2")      .addClass("active"); // Legger til klassen "active" til element med ID: "side2".
-  		$("#myNavbar")   .removeClass("in"); // Gjemmer dropdown-menyen ved menyvalg.
+  		$("#myNavbar")   .removeClass("in"); // Gjemmer dropdown-menyen ved menyvalg på mobil.
   		$("#slideshow")  .hide(); // Gjemmer slideshow
   		$(".col-sm-2")   .hide(); // Gjemmer sidekollonnen.
       $("#div1")       .load("sidene/2.html"); // Laster inn side "2".
